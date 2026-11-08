@@ -1,0 +1,36 @@
+name: CS169 hw-rspec-rails-intro
+on:
+  push:
+    branches: [edidada/cs169-hw]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rspec:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: false
+      - name: Install gems
+        run: |
+          bundle config set --local without 'production'
+          bundle install
+      - name: Prepare database
+        run: bin/rails db:test:prepare
+      - name: Run all specs
+        run: bundle exec rspec --format documentation
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rspec-rails-intro-results
+          path: |
+            spec/controllers/*.rb
+            spec/models/*.rb
+            app/models/movie.rb
+            app/controllers/movies_controller.rb
+          if-no-files-found: warn

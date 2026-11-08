@@ -53,6 +53,12 @@ group :development, :test do
 
   # Use RSpec for testing [https://github.com/rspec/rspec-rails]
   gem "rspec-rails"
+  # assigns/render_template helpers for the walkthrough controller specs
+  gem "rails-controller-testing"
+  # hw: WebMock for stubbing TMDb internet access in specs
+  gem "webmock"
+  # hw: Faraday for the TMDb lookup that the specs stub out
+  gem "faraday"
 end
 
 group :development do
