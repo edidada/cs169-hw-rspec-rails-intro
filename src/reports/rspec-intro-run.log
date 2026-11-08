@@ -1,0 +1,393 @@
+﻿2026-11-08T16:37:07.3458952Z Current runner version: '2.338.2'
+2026-11-08T16:37:07.3478963Z ##[group]Runner Image Provisioner
+2026-11-08T16:37:07.3479528Z Hosted Compute Agent
+2026-11-08T16:37:07.3480030Z Version: 20261028.624
+2026-11-08T16:37:07.3480468Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-08T16:37:07.3480966Z Build Date: 2026-10-28T21:51:42Z
+2026-11-08T16:37:07.3481405Z Worker ID: {c41a4beb-1661-49d9-999f-615110762b8c}
+2026-11-08T16:37:07.3481874Z Region: centralus
+2026-11-08T16:37:07.3482285Z Cloud: Azure
+2026-11-08T16:37:07.3482636Z ##[endgroup]
+2026-11-08T16:37:07.3483512Z ##[group]Operating System
+2026-11-08T16:37:07.3483919Z Ubuntu
+2026-11-08T16:37:07.3484295Z 24.04.5
+2026-11-08T16:37:07.3484671Z LTS
+2026-11-08T16:37:07.3485037Z ##[endgroup]
+2026-11-08T16:37:07.3485421Z ##[group]Runner Image
+2026-11-08T16:37:07.3485816Z Image: ubuntu-24.04
+2026-11-08T16:37:07.3486273Z Version: 20261101.360.1
+2026-11-08T16:37:07.3487125Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-08T16:37:07.3488203Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-08T16:37:07.3488815Z ##[endgroup]
+2026-11-08T16:37:07.3489532Z ##[group]GITHUB_TOKEN Permissions
+2026-11-08T16:37:07.3491059Z Contents: read
+2026-11-08T16:37:07.3491433Z Metadata: read
+2026-11-08T16:37:07.3492119Z ##[endgroup]
+2026-11-08T16:37:07.3493634Z Secret source: Actions
+2026-11-08T16:37:07.3494299Z Cache mode: write
+2026-11-08T16:37:07.3494769Z Prepare workflow directory
+2026-11-08T16:37:07.3759218Z Prepare all required actions
+2026-11-08T16:37:07.3794296Z Getting action download info
+2026-11-08T16:37:07.6061674Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-08T16:37:07.7346624Z Download action repository 'ruby/setup-ruby@v1' (SHA:b3aaceaef7e0ee231b499e7b5f49c03fc1d32199)
+2026-11-08T16:37:08.0976239Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-08T16:37:08.3646066Z Complete job name: rspec
+2026-11-08T16:37:08.4217762Z ##[group]Run actions/checkout@v4
+2026-11-08T16:37:08.4218417Z with:
+2026-11-08T16:37:08.4218729Z   repository: edidada/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:08.4221056Z   token: ***
+2026-11-08T16:37:08.4221319Z   ssh-strict: true
+2026-11-08T16:37:08.4221592Z   ssh-user: git
+2026-11-08T16:37:08.4221870Z   persist-credentials: true
+2026-11-08T16:37:08.4222175Z   clean: true
+2026-11-08T16:37:08.4222456Z   sparse-checkout-cone-mode: true
+2026-11-08T16:37:08.4222781Z   fetch-depth: 1
+2026-11-08T16:37:08.4223048Z   fetch-tags: false
+2026-11-08T16:37:08.4223325Z   show-progress: true
+2026-11-08T16:37:08.4223606Z   lfs: false
+2026-11-08T16:37:08.4223877Z   submodules: false
+2026-11-08T16:37:08.4224166Z   set-safe-directory: true
+2026-11-08T16:37:08.4224516Z   allow-unsafe-pr-checkout: false
+2026-11-08T16:37:08.4224919Z ##[endgroup]
+2026-11-08T16:37:08.6870006Z Syncing repository: edidada/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:08.6871246Z ##[group]Getting Git version info
+2026-11-08T16:37:08.6871847Z Working directory is '/home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro'
+2026-11-08T16:37:08.6872584Z [command]/usr/bin/git version
+2026-11-08T16:37:08.6973373Z git version 2.56.0
+2026-11-08T16:37:08.6985259Z ##[endgroup]
+2026-11-08T16:37:08.6995401Z Temporarily overriding HOME='/home/runner/work/_temp/c124f879-4424-43e7-aac7-1b7bd1fb7f03' before making global git config changes
+2026-11-08T16:37:08.6996730Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T16:37:08.6999203Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:08.7049183Z Deleting the contents of '/home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro'
+2026-11-08T16:37:08.7051028Z ##[group]Initializing the repository
+2026-11-08T16:37:08.7054812Z [command]/usr/bin/git init /home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:08.7152470Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-08T16:37:08.7153737Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-08T16:37:08.7154872Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-08T16:37:08.7155789Z hint: call:
+2026-11-08T16:37:08.7156330Z hint:
+2026-11-08T16:37:08.7156984Z hint: 	git config --global init.defaultBranch <name>
+2026-11-08T16:37:08.7157748Z hint:
+2026-11-08T16:37:08.7158600Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-08T16:37:08.7159686Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-08T16:37:08.7160576Z hint:
+2026-11-08T16:37:08.7161142Z hint: 	git branch -m <name>
+2026-11-08T16:37:08.7161811Z hint:
+2026-11-08T16:37:08.7162574Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-08T16:37:08.7164124Z Initialized empty Git repository in /home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro/.git/
+2026-11-08T16:37:08.7172045Z [command]/usr/bin/git remote add origin https://github.com/edidada/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:08.7220258Z ##[endgroup]
+2026-11-08T16:37:08.7221069Z ##[group]Disabling automatic garbage collection
+2026-11-08T16:37:08.7222679Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-08T16:37:08.7265146Z ##[endgroup]
+2026-11-08T16:37:08.7265623Z ##[group]Setting up auth
+2026-11-08T16:37:08.7271238Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T16:37:08.7303803Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T16:37:08.7651913Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T16:37:08.7691997Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T16:37:08.7894443Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T16:37:08.7935537Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-08T16:37:08.8129482Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-08T16:37:08.8170645Z ##[endgroup]
+2026-11-08T16:37:08.8171216Z ##[group]Fetching the repository
+2026-11-08T16:37:08.8179068Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0da7d69bc2d534f9ff1e132fc499e5e472010479:refs/remotes/origin/edidada/cs169-hw
+2026-11-08T16:37:09.2425490Z From https://github.com/edidada/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:09.2428347Z  * [new ref]         0da7d69bc2d534f9ff1e132fc499e5e472010479 -> origin/edidada/cs169-hw
+2026-11-08T16:37:09.2432009Z ##[endgroup]
+2026-11-08T16:37:09.2433103Z ##[group]Determining the checkout info
+2026-11-08T16:37:09.2434215Z ##[endgroup]
+2026-11-08T16:37:09.2436707Z [command]/usr/bin/git sparse-checkout disable
+2026-11-08T16:37:09.2552326Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-08T16:37:09.2585977Z ##[group]Checking out the ref
+2026-11-08T16:37:09.2595155Z [command]/usr/bin/git checkout --progress --force -B edidada/cs169-hw refs/remotes/origin/edidada/cs169-hw
+2026-11-08T16:37:09.2741499Z Switched to a new branch 'edidada/cs169-hw'
+2026-11-08T16:37:09.2747670Z branch 'edidada/cs169-hw' set up to track 'origin/edidada/cs169-hw'.
+2026-11-08T16:37:09.2752970Z ##[endgroup]
+2026-11-08T16:37:09.2793733Z [command]/usr/bin/git log -1 --format=%H
+2026-11-08T16:37:09.2822662Z 0da7d69bc2d534f9ff1e132fc499e5e472010479
+2026-11-08T16:37:09.3094988Z ##[group]Run ruby/setup-ruby@v1
+2026-11-08T16:37:09.3095752Z with:
+2026-11-08T16:37:09.3096333Z   ruby-version: 3.3
+2026-11-08T16:37:09.3096970Z   bundler-cache: false
+2026-11-08T16:37:09.3102862Z   token: ***
+2026-11-08T16:37:09.3103440Z ##[endgroup]
+2026-11-08T16:37:09.4403418Z ##[group]Modifying PATH
+2026-11-08T16:37:09.4404565Z Entries added to PATH to use selected Ruby:
+2026-11-08T16:37:09.4405807Z   /opt/hostedtoolcache/Ruby/3.3.13/x64/bin
+2026-11-08T16:37:09.4408882Z ##[endgroup]
+2026-11-08T16:37:09.4410325Z ##[group]Print Ruby version
+2026-11-08T16:37:09.4518844Z [command]/opt/hostedtoolcache/Ruby/3.3.13/x64/bin/ruby --version
+2026-11-08T16:37:09.8872379Z ruby 3.3.13 (2026-10-23 revision af48f08f21) [x86_64-linux]
+2026-11-08T16:37:09.8904182Z Took   0.45 seconds
+2026-11-08T16:37:09.8905859Z ##[endgroup]
+2026-11-08T16:37:09.8907309Z ##[group]Installing Bundler
+2026-11-08T16:37:09.8909572Z Using Bundler 2.5.22 from Gemfile.lock BUNDLED WITH 2.5.22
+2026-11-08T16:37:09.8913142Z [command]/opt/hostedtoolcache/Ruby/3.3.13/x64/bin/gem install bundler -v 2.5.22
+2026-11-08T16:37:11.7159906Z Successfully installed bundler-2.5.22
+2026-11-08T16:37:11.7160191Z 1 gem installed
+2026-11-08T16:37:11.7213258Z Took   1.83 seconds
+2026-11-08T16:37:11.7214039Z ##[endgroup]
+2026-11-08T16:37:11.7357456Z ##[group]Run bundle config set --local without 'production'
+2026-11-08T16:37:11.7357762Z [36;1mbundle config set --local without 'production'[0m
+2026-11-08T16:37:11.7358205Z [36;1mbundle install[0m
+2026-11-08T16:37:11.7380057Z shell: /usr/bin/bash -e {0}
+2026-11-08T16:37:11.7380230Z ##[endgroup]
+2026-11-08T16:37:14.6399495Z Fetching gem metadata from https://rubygems.org/.........
+2026-11-08T16:37:14.7996674Z Resolving dependencies...
+2026-11-08T16:37:15.0803449Z Fetching rake 13.3.0
+2026-11-08T16:37:15.1566359Z Installing rake 13.3.0
+2026-11-08T16:37:15.1652215Z Fetching base64 0.3.0
+2026-11-08T16:37:15.1653656Z Fetching benchmark 0.4.1
+2026-11-08T16:37:15.1653872Z Fetching bigdecimal 3.2.3
+2026-11-08T16:37:15.1654172Z Fetching concurrent-ruby 1.3.5
+2026-11-08T16:37:15.1763243Z Installing base64 0.3.0
+2026-11-08T16:37:15.1781171Z Fetching connection_pool 2.5.4
+2026-11-08T16:37:15.1858196Z Installing benchmark 0.4.1
+2026-11-08T16:37:15.1884003Z Fetching drb 2.2.3
+2026-11-08T16:37:15.1998330Z Installing bigdecimal 3.2.3 with native extensions
+2026-11-08T16:37:15.2265458Z Installing concurrent-ruby 1.3.5
+2026-11-08T16:37:15.2309021Z Installing connection_pool 2.5.4
+2026-11-08T16:37:15.2351719Z Fetching logger 1.7.0
+2026-11-08T16:37:15.2410140Z Installing drb 2.2.3
+2026-11-08T16:37:15.2896649Z Installing logger 1.7.0
+2026-11-08T16:37:15.2907409Z Fetching minitest 5.25.5
+2026-11-08T16:37:15.2952190Z Fetching mutex_m 0.3.0
+2026-11-08T16:37:15.3066974Z Installing minitest 5.25.5
+2026-11-08T16:37:15.3143027Z Fetching securerandom 0.4.1
+2026-11-08T16:37:15.3145680Z Installing mutex_m 0.3.0
+2026-11-08T16:37:15.3185709Z Fetching builder 3.3.0
+2026-11-08T16:37:15.3221650Z Fetching erubi 1.13.1
+2026-11-08T16:37:15.3261361Z Installing securerandom 0.4.1
+2026-11-08T16:37:15.3277422Z Fetching racc 1.8.1
+2026-11-08T16:37:15.3365042Z Installing builder 3.3.0
+2026-11-08T16:37:15.3432851Z Fetching crass 1.0.6
+2026-11-08T16:37:15.3456966Z Installing erubi 1.13.1
+2026-11-08T16:37:15.3485410Z Fetching rack 3.2.1
+2026-11-08T16:37:15.3568872Z Installing racc 1.8.1 with native extensions
+2026-11-08T16:37:15.3656456Z Installing crass 1.0.6
+2026-11-08T16:37:15.3693200Z Fetching nio4r 2.7.4
+2026-11-08T16:37:15.3833570Z Installing rack 3.2.1
+2026-11-08T16:37:15.3962588Z Installing nio4r 2.7.4 with native extensions
+2026-11-08T16:37:15.4041718Z Fetching websocket-extensions 0.1.5
+2026-11-08T16:37:15.4158769Z Installing websocket-extensions 0.1.5
+2026-11-08T16:37:15.4188337Z Fetching zeitwerk 2.7.3
+2026-11-08T16:37:15.4377831Z Installing zeitwerk 2.7.3
+2026-11-08T16:37:15.4445084Z Fetching timeout 0.4.3
+2026-11-08T16:37:15.4568645Z Installing timeout 0.4.3
+2026-11-08T16:37:15.4593881Z Fetching marcel 1.1.0
+2026-11-08T16:37:15.4718222Z Installing marcel 1.1.0
+2026-11-08T16:37:15.4751940Z Fetching mini_mime 1.1.5
+2026-11-08T16:37:15.4869370Z Installing mini_mime 1.1.5
+2026-11-08T16:37:15.4911417Z Fetching date 3.4.1
+2026-11-08T16:37:15.5034336Z Installing date 3.4.1 with native extensions
+2026-11-08T16:37:17.5659030Z Fetching public_suffix 7.0.5
+2026-11-08T16:37:17.6489241Z Installing public_suffix 7.0.5
+2026-11-08T16:37:17.6608976Z Fetching bindex 0.8.1
+2026-11-08T16:37:17.6776442Z Installing bindex 0.8.1 with native extensions
+2026-11-08T16:37:17.9435178Z Fetching msgpack 1.8.0
+2026-11-08T16:37:17.9665209Z Installing msgpack 1.8.0 with native extensions
+2026-11-08T16:37:20.6797105Z Fetching prettyprint 0.2.0
+2026-11-08T16:37:20.7296614Z Installing prettyprint 0.2.0
+2026-11-08T16:37:20.7392804Z Fetching erb 5.0.2
+2026-11-08T16:37:20.7650118Z Installing erb 5.0.2 with native extensions
+2026-11-08T16:37:21.3250752Z Fetching stringio 3.1.7
+2026-11-08T16:37:21.4638943Z Installing stringio 3.1.7 with native extensions
+2026-11-08T16:37:22.3834045Z Fetching io-console 0.8.1
+2026-11-08T16:37:22.4049228Z Installing io-console 0.8.1 with native extensions
+2026-11-08T16:37:22.5619533Z Fetching diff-lcs 1.6.2
+2026-11-08T16:37:22.5954253Z Installing diff-lcs 1.6.2
+2026-11-08T16:37:22.6118783Z Fetching uri 1.1.2
+2026-11-08T16:37:22.6289051Z Installing uri 1.1.2
+2026-11-08T16:37:22.6349257Z Fetching json 2.21.2
+2026-11-08T16:37:22.6609068Z Installing json 2.21.2 with native extensions
+2026-11-08T16:37:24.0369651Z Fetching hashdiff 1.2.1
+2026-11-08T16:37:24.0521253Z Installing hashdiff 1.2.1
+2026-11-08T16:37:24.0584702Z Fetching thor 1.4.0
+2026-11-08T16:37:24.0788151Z Installing thor 1.4.0
+2026-11-08T16:37:24.0858752Z Fetching rspec-support 3.13.7
+2026-11-08T16:37:24.1037030Z Installing rspec-support 3.13.7
+2026-11-08T16:37:24.1137269Z Fetching sqlite3 2.7.4 (x86_64-linux-gnu)
+2026-11-08T16:37:24.2369096Z Installing sqlite3 2.7.4 (x86_64-linux-gnu)
+2026-11-08T16:37:24.2816648Z Fetching i18n 1.14.7
+2026-11-08T16:37:24.3008785Z Installing i18n 1.14.7
+2026-11-08T16:37:24.3086083Z Fetching tzinfo 2.0.6
+2026-11-08T16:37:24.3298926Z Installing tzinfo 2.0.6
+2026-11-08T16:37:24.3388955Z Fetching rack-session 2.1.1
+2026-11-08T16:37:24.3573138Z Installing rack-session 2.1.1
+2026-11-08T16:37:24.3603880Z Fetching rack-test 2.2.0
+2026-11-08T16:37:24.3767365Z Installing rack-test 2.2.0
+2026-11-08T16:37:24.3803427Z Fetching rackup 2.2.1
+2026-11-08T16:37:24.3828602Z Fetching sprockets 4.2.2
+2026-11-08T16:37:24.3964378Z Installing rackup 2.2.1
+2026-11-08T16:37:24.3993756Z Fetching websocket-driver 0.8.0
+2026-11-08T16:37:24.4145486Z Installing sprockets 4.2.2
+2026-11-08T16:37:24.4290050Z Fetching net-protocol 0.2.2
+2026-11-08T16:37:24.4308802Z Installing websocket-driver 0.8.0 with native extensions
+2026-11-08T16:37:24.4453336Z Installing net-protocol 0.2.2
+2026-11-08T16:37:24.4596381Z Fetching nokogiri 1.18.10 (x86_64-linux-gnu)
+2026-11-08T16:37:24.5918933Z Installing nokogiri 1.18.10 (x86_64-linux-gnu)
+2026-11-08T16:37:24.7811785Z Fetching addressable 2.9.2
+2026-11-08T16:37:24.7884785Z Fetching puma 7.0.4
+2026-11-08T16:37:24.7994462Z Installing addressable 2.9.2
+2026-11-08T16:37:24.8025139Z Fetching pp 0.6.2
+2026-11-08T16:37:24.8204373Z Installing puma 7.0.4 with native extensions
+2026-11-08T16:37:24.8311780Z Installing pp 0.6.2
+2026-11-08T16:37:24.8379150Z Fetching bootsnap 1.18.6
+2026-11-08T16:37:24.8549325Z Installing bootsnap 1.18.6 with native extensions
+2026-11-08T16:37:24.9963330Z Fetching net-http 0.9.1
+2026-11-08T16:37:25.0159138Z Installing net-http 0.9.1
+2026-11-08T16:37:25.0195849Z Fetching psych 5.2.6
+2026-11-08T16:37:25.0367021Z Installing psych 5.2.6 with native extensions
+2026-11-08T16:37:25.8974708Z Fetching rspec-core 3.13.6
+2026-11-08T16:37:25.9319071Z Installing rspec-core 3.13.6
+2026-11-08T16:37:25.9471663Z Fetching rspec-expectations 3.13.5
+2026-11-08T16:37:25.9679036Z Installing rspec-expectations 3.13.5
+2026-11-08T16:37:25.9763311Z Fetching rspec-mocks 3.13.8
+2026-11-08T16:37:25.9949308Z Installing rspec-mocks 3.13.8
+2026-11-08T16:37:26.0041360Z Fetching activesupport 7.1.5.2
+2026-11-08T16:37:26.0307072Z Installing activesupport 7.1.5.2
+2026-11-08T16:37:26.0740781Z Fetching crack 1.0.1
+2026-11-08T16:37:26.0929007Z Installing crack 1.0.1
+2026-11-08T16:37:26.0952622Z Fetching net-imap 0.5.11
+2026-11-08T16:37:26.1158808Z Installing net-imap 0.5.11
+2026-11-08T16:37:26.1311322Z Fetching loofah 2.24.1
+2026-11-08T16:37:26.1488418Z Installing loofah 2.24.1
+2026-11-08T16:37:26.1541906Z Fetching reline 0.6.2
+2026-11-08T16:37:26.1725730Z Installing reline 0.6.2
+2026-11-08T16:37:26.1786911Z Fetching faraday-net_http 3.5.0
+2026-11-08T16:37:26.1969035Z Installing faraday-net_http 3.5.0
+2026-11-08T16:37:26.2000269Z Fetching rails-dom-testing 2.3.0
+2026-11-08T16:37:26.2201061Z Installing rails-dom-testing 2.3.0
+2026-11-08T16:37:26.2236178Z Fetching globalid 1.3.0
+2026-11-08T16:37:26.2408349Z Installing globalid 1.3.0
+2026-11-08T16:37:26.2459450Z Fetching activemodel 7.1.5.2
+2026-11-08T16:37:26.2658849Z Installing activemodel 7.1.5.2
+2026-11-08T16:37:26.2772793Z Fetching webmock 3.34.0
+2026-11-08T16:37:26.2981372Z Installing webmock 3.34.0
+2026-11-08T16:37:26.3109426Z Fetching mail 2.8.1
+2026-11-08T16:37:26.3427303Z Installing mail 2.8.1
+2026-11-08T16:37:26.3766365Z Fetching rails-html-sanitizer 1.6.2
+2026-11-08T16:37:26.3940091Z Installing rails-html-sanitizer 1.6.2
+2026-11-08T16:37:26.3998738Z Fetching activejob 7.1.5.2
+2026-11-08T16:37:26.4209125Z Installing activejob 7.1.5.2
+2026-11-08T16:37:26.4300580Z Fetching activerecord 7.1.5.2
+2026-11-08T16:37:26.4782172Z Installing activerecord 7.1.5.2
+2026-11-08T16:37:26.5553492Z Fetching actionview 7.1.5.2
+2026-11-08T16:37:26.5823036Z Installing actionview 7.1.5.2
+2026-11-08T16:37:26.5846450Z Fetching rdoc 6.14.2
+2026-11-08T16:37:26.6064366Z Fetching actionpack 7.1.5.2
+2026-11-08T16:37:26.6191861Z Installing rdoc 6.14.2
+2026-11-08T16:37:26.6465212Z Installing actionpack 7.1.5.2
+2026-11-08T16:37:26.7669696Z Fetching jbuilder 2.14.1
+2026-11-08T16:37:26.7688953Z Fetching actioncable 7.1.5.2
+2026-11-08T16:37:26.7881019Z Installing jbuilder 2.14.1
+2026-11-08T16:37:26.7937833Z Fetching activestorage 7.1.5.2
+2026-11-08T16:37:26.8068731Z Installing actioncable 7.1.5.2
+2026-11-08T16:37:26.8154468Z Fetching actionmailer 7.1.5.2
+2026-11-08T16:37:26.8239978Z Installing activestorage 7.1.5.2
+2026-11-08T16:37:26.8355422Z Fetching rails-controller-testing 1.0.5
+2026-11-08T16:37:26.8407521Z Installing actionmailer 7.1.5.2
+2026-11-08T16:37:26.8456804Z Fetching sprockets-rails 3.5.2
+2026-11-08T16:37:26.8562822Z Installing rails-controller-testing 1.0.5
+2026-11-08T16:37:26.8651708Z Fetching irb 1.15.2
+2026-11-08T16:37:26.8699061Z Installing sprockets-rails 3.5.2
+2026-11-08T16:37:26.8732197Z Fetching actionmailbox 7.1.5.2
+2026-11-08T16:37:26.8868450Z Installing irb 1.15.2
+2026-11-08T16:37:26.8972384Z Fetching actiontext 7.1.5.2
+2026-11-08T16:37:26.9018661Z Installing actionmailbox 7.1.5.2
+2026-11-08T16:37:26.9122857Z Fetching debug 1.11.0
+2026-11-08T16:37:26.9197663Z Installing actiontext 7.1.5.2
+2026-11-08T16:37:26.9375759Z Fetching railties 7.1.5.2
+2026-11-08T16:37:26.9389089Z Installing debug 1.11.0 with native extensions
+2026-11-08T16:37:26.9645650Z Installing railties 7.1.5.2
+2026-11-08T16:37:27.0159070Z Fetching importmap-rails 2.2.2
+2026-11-08T16:37:27.0351653Z Installing importmap-rails 2.2.2
+2026-11-08T16:37:27.0398055Z Fetching rails 7.1.5.2
+2026-11-08T16:37:27.0577492Z Installing rails 7.1.5.2
+2026-11-08T16:37:27.0628598Z Fetching rspec-rails 7.1.1
+2026-11-08T16:37:27.0818849Z Installing rspec-rails 7.1.1
+2026-11-08T16:37:27.0968927Z Fetching stimulus-rails 1.3.4
+2026-11-08T16:37:27.1158890Z Installing stimulus-rails 1.3.4
+2026-11-08T16:37:27.1221073Z Fetching turbo-rails 2.0.17
+2026-11-08T16:37:27.1469090Z Installing turbo-rails 2.0.17
+2026-11-08T16:37:27.1584017Z Fetching web-console 4.2.1
+2026-11-08T16:37:27.1799065Z Installing web-console 4.2.1
+2026-11-08T16:37:29.4357623Z Fetching faraday 2.15.1
+2026-11-08T16:37:29.4888135Z Installing faraday 2.15.1
+2026-11-08T16:37:29.5611553Z Bundle complete! 18 Gemfile dependencies, 94 gems now installed.
+2026-11-08T16:37:29.5612442Z Gems in the group 'production' were not installed.
+2026-11-08T16:37:29.5612862Z Use `bundle info [gemname]` to see where a bundled gem is installed.
+2026-11-08T16:37:29.6834229Z ##[group]Run bin/rails db:test:prepare
+2026-11-08T16:37:29.6834440Z [36;1mbin/rails db:test:prepare[0m
+2026-11-08T16:37:29.6850659Z shell: /usr/bin/bash -e {0}
+2026-11-08T16:37:29.6850799Z ##[endgroup]
+2026-11-08T16:37:32.0456931Z ##[group]Run bundle exec rspec --format documentation
+2026-11-08T16:37:32.0457186Z [36;1mbundle exec rspec --format documentation[0m
+2026-11-08T16:37:32.0473542Z shell: /usr/bin/bash -e {0}
+2026-11-08T16:37:32.0473684Z ##[endgroup]
+2026-11-08T16:37:33.2746044Z 
+2026-11-08T16:37:33.2746594Z MoviesController
+2026-11-08T16:37:33.2746860Z   searching TMDb
+2026-11-08T16:37:33.2895768Z     calls the model method that performs TMDb search
+2026-11-08T16:37:33.2896152Z     after valid search
+2026-11-08T16:37:33.2918228Z       selects the Search Results template for rendering
+2026-11-08T16:37:33.2939265Z       makes the TMDb search results available to that template
+2026-11-08T16:37:33.2939619Z   search behaviors from the hw docs
+2026-11-08T16:37:33.2956952Z     warns when required title is missing
+2026-11-08T16:37:33.2969521Z     warns when TMDb returns no matching movies
+2026-11-08T16:37:33.2969833Z   adding a movie from search results
+2026-11-08T16:37:33.3049643Z     creates the movie and redirects back to the search page with a notice
+2026-11-08T16:37:33.3049953Z 
+2026-11-08T16:37:33.3050031Z Movie
+2026-11-08T16:37:33.3050416Z   searching Tmdb by keyword
+2026-11-08T16:37:33.3055812Z     calls Faraday gem with CS169 domain
+2026-11-08T16:37:33.3640127Z     builds Movie objects from a TMDb response
+2026-11-08T16:37:33.3643152Z 
+2026-11-08T16:37:33.3643350Z Finished in 0.09041 seconds (files took 1.07 seconds to load)
+2026-11-08T16:37:33.3643660Z 8 examples, 0 failures
+2026-11-08T16:37:33.3643792Z 
+2026-11-08T16:37:33.3895550Z ##[group]Run actions/upload-artifact@v4
+2026-11-08T16:37:33.3895716Z with:
+2026-11-08T16:37:33.3895853Z   name: rspec-rails-intro-results
+2026-11-08T16:37:33.3896119Z   path: spec/controllers/*.rb
+spec/models/*.rb
+app/models/movie.rb
+app/controllers/movies_controller.rb
+
+2026-11-08T16:37:33.3896382Z   if-no-files-found: warn
+2026-11-08T16:37:33.3896515Z   compression-level: 6
+2026-11-08T16:37:33.3896637Z   overwrite: false
+2026-11-08T16:37:33.3896759Z   include-hidden-files: false
+2026-11-08T16:37:33.3896894Z ##[endgroup]
+2026-11-08T16:37:33.5010898Z (node:3191) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-08T16:37:33.5011317Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T16:37:33.5065324Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-08T16:37:33.5067372Z The least common ancestor is /home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro. This will be the root directory of the artifact
+2026-11-08T16:37:33.5068216Z With the provided path, there will be 4 files uploaded
+2026-11-08T16:37:33.5071648Z Artifact name is valid!
+2026-11-08T16:37:33.5072135Z Root directory input is valid!
+2026-11-08T16:37:33.7747089Z Beginning upload of artifact content to blob storage
+2026-11-08T16:37:33.8328578Z (node:3191) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-08T16:37:33.9778171Z Uploaded bytes 3887
+2026-11-08T16:37:34.0194423Z Finished uploading artifact content to blob storage!
+2026-11-08T16:37:34.0194977Z SHA256 digest of uploaded artifact zip is 06f1f6f29532bfd664ac61c0603cbf758eec0cf13a2eacfc0d45b824762bbbff
+2026-11-08T16:37:34.0196414Z Finalizing artifact upload
+2026-11-08T16:37:34.4104757Z Artifact rspec-rails-intro-results.zip successfully finalized. Artifact ID 13625402725
+2026-11-08T16:37:34.4105437Z Artifact rspec-rails-intro-results has been successfully uploaded! Final size is 3887 bytes. Artifact ID is 13625402725
+2026-11-08T16:37:34.4109174Z Artifact download URL: https://github.com/edidada/cs169-hw-rspec-rails-intro/actions/runs/42500803145/artifacts/13625402725
+2026-11-08T16:37:34.4305453Z Post job cleanup.
+2026-11-08T16:37:34.4914625Z [command]/usr/bin/git version
+2026-11-08T16:37:34.4950136Z git version 2.56.0
+2026-11-08T16:37:34.4975109Z Temporarily overriding HOME='/home/runner/work/_temp/d76fe01e-173c-4df5-a6a6-dcd35afaf426' before making global git config changes
+2026-11-08T16:37:34.4975861Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T16:37:34.4978639Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cs169-hw-rspec-rails-intro/cs169-hw-rspec-rails-intro
+2026-11-08T16:37:34.5016611Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T16:37:34.5048947Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T16:37:34.5266021Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T16:37:34.5292537Z http.https://github.com/.extraheader
+2026-11-08T16:37:34.5302005Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-08T16:37:34.5362442Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T16:37:34.5586747Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T16:37:34.5627222Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-08T16:37:34.5962062Z Cleaning up orphan processes
+2026-11-08T16:37:34.6202384Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
